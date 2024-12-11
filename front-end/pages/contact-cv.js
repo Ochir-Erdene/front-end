@@ -1,30 +1,30 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Call from '../public/Call.png'
 import Line from '../public/line.png'
+import { HiArrowNarrowLeft } from "react-icons/hi";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <nav className="bg-red-950 ">
       <div className="container mx-auto">
-        <div className="sm:flex justify-around">
-          <a href="/" className="text-amber-50 text-3xl font-bold p-3">Ochir-Erdene</a>
+        <div className="sm:flex items-center justify-around">
+        <div className="ml-12 w-full  absolute"><HiArrowNarrowLeft onClick={() => {router.push("/")}} className="w-[30px] h-[30px] fill-white hover:fill-slate-300 cursor-pointer"/></div>
 
-          {/* <ul className="text-gray-400 sm:self-center text-xl border-t sm:border-none">
-            <li className="sm:inline-block">
-              <a href="#" className="p-3 hover:text-white">About Me</a>
-            </li> 
-          </ul>  */}
+
+          <a onClick={() => {router.push("cv")}} className="text-amber-50 text-3xl font-bold p-3">Ochir-Erdene</a>
 
           <ul className="text-gray-400 sm:self-center text-xl border-t sm:border-none">
             <li className="sm:inline-block">
-              <a href="/skills-cv" className="p-3 hover:text-white">Skills</a>
+              <a onClick={() => {router.push("skills-cv")}} className="p-3 hover:text-white">Skills</a>
             </li>
           </ul>
 
           <ul className="text-gray-400 sm:self-center text-xl border-t sm:border-none">
             <li className="sm:inline-block">
-              <a href="/contact-cv" className="p-3 hover:text-white">Contact</a>
+              <a onClick={() => {router.push("contact-cv")}} className="p-3 hover:text-white">Contact</a>
             </li>
           </ul>
         </div>

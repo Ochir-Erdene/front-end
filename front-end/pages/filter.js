@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 
-// Sample data
 const data = [
     { id: 1, Name: "Blitz", gmail: "blitz@gmail.com" },
     { id: 2, Name: "Senzu", gmail: "senzu@gmail.com" },
@@ -47,7 +46,7 @@ export default function News() {
             <div className="mt-5 flex justify-center">
                 <div className="w-11/12">{filteredGamers.length > 0 ? (filteredGamers.map((gamer) => (
                             <div className="shadow-xl bg-white rounded-xl p-4 mt-4 flex flex-col  text-black" 
-                            key={gamer.id}>
+                             key={gamer.id}>
                                 <strong>{gamer.Name}</strong>
                                 <p>{gamer.gmail}</p>
                             </div>

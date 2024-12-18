@@ -1,6 +1,4 @@
 import { useRouter } from "next/router";
-import CV from '../public/Cv.png'
-import { useState } from "react";
 
 export default function Home(){
     const router = useRouter()
@@ -11,7 +9,7 @@ export default function Home(){
                 <button onClick={() => {router.push("weather")}} className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">Weather</button>
                 <button onClick={() => {router.push("filter")}} className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">Filter</button>
                 <button onClick={() => {router.push("grid")}} className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">Grid</button>
-                <button className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">...</button>
+                <button onClick={() => {router.push("bieDaalt")}} className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">Bie Daalt</button>
                 <button className="w-[450px] h-[450px] bg-white rounded-3xl hover:bg-blue-100">...</button>
         </div>
     );

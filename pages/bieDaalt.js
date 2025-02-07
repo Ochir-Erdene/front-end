@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 
 const data = [
@@ -29,6 +29,11 @@ export default function News() {
   const [grid, setGrid] = useState(true);
   const [search, setSearch] = useState("");
   const [filteredStudents, setFilteredStudents] = useState(data);
+
+  useEffect(()=>{
+    setGrid(grid);
+  }, []);
+  console.log("hi", grid);
 
   const handleSearch = (event) => {
     const query = event.target.value;

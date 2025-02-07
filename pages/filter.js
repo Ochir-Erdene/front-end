@@ -13,7 +13,7 @@ const data = [
 
 export default function News() {
     const router = useRouter();
-    
+
     const [search, setSearch] = useState("");
     const [filteredGamers, setFilteredGamers] = useState(data);
 

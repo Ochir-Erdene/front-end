@@ -45,7 +45,7 @@ export default function News() {
                     {data.map((things) => (
                         <div key={things.id} className="border-2 border-black rounded-xl p-4 flex flex-col justify-evenly text-black text-xl">
                             <h1 className="font-bold text-2xl mb-3">{things.title}</h1>
-                            <h1>{things.text}</h1>
+                            <h1>{things.text}</h1>  
                         </div>
                     ))}
                 </div>
